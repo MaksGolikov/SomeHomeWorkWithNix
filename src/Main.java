@@ -14,11 +14,20 @@ public class Main {
 
         //2
         System.out.println("#2");
-        String[] arr = {"9 45", "10 35", "11 35", "12 25", "13 25", "14 15", "15 15", "16 05", "17 05", "17 55"};
-        System.out.println(arr[(int) (Math.random() * 10) + 1 - 1]);
+        //String[] arr = {"9 45", "10 35", "11 35", "12 25", "13 25", "14 15", "15 15", "16 05", "17 05", "17 55"};
+        //System.out.println(arr[(int) (Math.random() * 10) + 1 - 1]);
         //(int) (Math.random() * 10)+1 - эта штука вернет от 1 до 10, но что бы обратится к элементу в массиве, нужно сделать -1
         //хотя можно было сразу написать (int) (Math.random() * 10), но в задании сказано сгенер. число от 1 до 10
 
+        int numOfLes = 3;
+        int startFirstLesson = 9;
+        int addedMinutesFromLessons = numOfLes * 45;
+        int MinOfBreak = (numOfLes - 1) * 10;
+        MinOfBreak -= ((numOfLes - 1) % 2) * 5;
+        int TimeSpand = MinOfBreak + addedMinutesFromLessons;
+        int hours = 9 + (TimeSpand / 60);
+        int minutes = TimeSpand % 60;
+        System.out.println("Time is "+hours+ " "+minutes);
 
         //3
         System.out.println("#3");
